@@ -1,0 +1,99 @@
+.container-doctors{
+    display: flex;
+}
+.container-doctors::before{
+    content: '';
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00E5EE;
+    z-index: -1;
+}
+.block__header{
+    display: flex;
+    justify-content: space-between;
+    font-family:'Montserrat', Arial, Tahoma, sans-serif; 
+    margin: 20px;
+    &--path{
+        margin-top: 10px;
+        min-width: 140px;
+        height: 30px;
+        padding-left: 40px;
+        padding-top: 15px;
+        padding-right: 20px; 
+        border-radius: 50px;
+        background-color: rgba(255,255,255,0.3);
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+.block__header--title h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 7px;
+}
+.welcome__message{
+    color:#636c72;
+}
+.heading{
+    background-color: #fff;
+    border-radius: 3px;
+    width: 85%;
+    height: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.doctor-card{
+    display: flex;
+}
+.card{
+    margin: 10px;
+    background-color:#e0eff5;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    &-image{
+        width: 100%;
+        height: auto;
+    }
+    &-rule{
+        overflow: visible; /* For IE */
+        height: 30px;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 2px 0 0 0;
+        border-radius: 20px;
+        width: 80%;
+        margin: 0 auto;
+        &::before{
+            display: block;
+            content: "";
+            height: 30px;
+            margin-top: -31px;
+            border-style: solid;
+            border-color: #fff;
+            border-width: 0 0 2px 0;
+            border-radius: 20px;
+        }
+    }
+    &-name{
+        font-size: 20px;
+        font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    }
+    &-title{
+        margin: 10px 0 10px 0;
+        color: #636c72;
+        font-size: 15px;
+        font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    }
+    &-address{
+        color:#636c72;
+        font-family:'Montserrat', Arial, Tahoma, sans-serif;
+    }
+}

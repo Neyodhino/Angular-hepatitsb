@@ -1,0 +1,53 @@
+.patient_card{
+    width: 92%;
+    margin-top: 20px;
+    margin-left: 20px; 
+    background-color: #fff;
+}
+.patient_header{
+    padding: 20px;
+    color: #636c72;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.patient_header::before{
+    margin: 0;
+    padding: 0;
+    content: '';
+    border: 1px solid rgb(117, 249, 253);
+}
+table{
+    margin-right: 20px;
+    margin-left: 30px;
+    border-collapse: collapse;
+    width: 90%;
+}
+tr{
+    background: #ededed;
+    padding: 10px 15px;
+    height: 40px;
+}
+th,td{
+    padding: 10px 15px;
+    height: 40px;
+}
+tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+.high__risk{
+    border: 1px solid red;
+    border-radius: 3px;
+    color: red;
+    padding: 5px;
+    font-weight: bold;
+}
+.low__risk{
+    border: 1px solid green;
+    border-radius: 3px;
+    color: green;
+    padding: 5px;
+    font-weight: bold;
+}
+.example-margin {
+    margin: 0 auto;
+  }

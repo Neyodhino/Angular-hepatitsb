@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="side-bar">
+    <app-sidebar> </app-sidebar>
+  </div>
+  <div class="content">
+    <app-header></app-header>
+
+    <div class="block__header">
+      <div class="block__header--title">
+        <h2> Add Patient</h2>
+        <small class="welcome__message">Welcome to Hepatitis Model System</small>
+      </div>
+      <div class="block__header--path">
+        <!--<i class="zmdi zmdi-home"> -->
+        <a href="#" routerLink="/dashboard"> Home</a> / <span style="color: #636c72;">Add Patient</span>
+      </div>
+    </div>
+    <div class="container-register">
+      <h2 class="register-header">
+        <strong style="color: rgb(117, 249, 253);">Basic</strong> Information
+      </h2>
+      <div class="form-body">
+        <form action="#" class="form">
+          <input type="text" name="first_name" placeholder="Enter First Name" id="first_name">
+          <input type="text" name="last_name" placeholder="Enter Last Name" id="last_name">
+          <select class="gender">
+            <option>-Gender-</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <input type="number" name="age" placeholder="Enter Age" id="Age">
+          <input type="number" name="phone" placeholder="Enter Phone Number" id="phone" maxlength="11">
+          <input type="email" name="email" placeholder="Enter Email" id="email">
+          <select class="Status">
+            <option>-Status-</option>
+            <option>High Risk</option>
+            <option>Low Risk</option>
+          </select>
+          <input type="submit" value="submit" id="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

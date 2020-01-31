@@ -1,0 +1,58 @@
+<div class="nav-content">
+  <div class="nav-title">
+    <a href="#">Dashboard</a>
+  </div>
+
+  <div class="admin-title" *ngIf="!loaded else details_t">
+    <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+    </mat-progress-spinner>
+  </div>
+
+  <ng-template #details_t>
+    <img src="../../../assets/images/doctor_girl.jpg" alt="image" class="admin-image">
+    <div class="admin-title">
+      <p class="admin-title--name">{{doctor["doctor_surname"]}} {{doctor["doctor_name"]}}</p>
+      <p class="admin-title--title">{{doctor["specialization"]}}</p>
+    </div>
+  </ng-template>
+  <hr>
+  
+  <div class="text-main">
+    <p>-- main</p>
+  </div>
+
+  <nav class="sidebar">
+    <ul class="side-nav">
+      <li>
+        <a href="#" routerLink="/dashboard">
+          <i class="zmdi zmdi-home dashboard-icon"></i>
+          <span class="dashboard-link">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" routerLink="/add-doctor">
+          <i class="zmdi zmdi-calendar-check"></i>
+          <span>Add Doctors</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" routerLink="/all-doctor">
+          <i class="zmdi zmdi-account-add"></i>
+          <span>View Doctors</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" routerLink="/add-patient">
+          <i class="zmdi zmdi-account-o"></i>
+          <span>Add Patient</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" routerLink="/all-patient">
+          <i class="zmdi zmdi-account-o"></i>
+          <span>View Patient</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

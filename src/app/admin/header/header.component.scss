@@ -1,0 +1,48 @@
+.header{
+    width: 75.3vw;
+    height: 60px;
+    background-color: #00E5EE;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.header-brand{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.logout{
+    color: white;
+    font-size: 20px;
+}
+.search-input{
+    border: 1px solid #fff;
+    height: 40px;
+    width: 200px;
+    border-radius: 80px;
+    padding-left: 17px;
+    background-color: transparent;
+    transition: .3s;
+
+    &:focus{
+        outline: none;
+        background-color: #fff;
+        width: 230px;
+    }
+}
+::placeholder{
+    color: #fff;
+}
+.search-button{
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    margin-left: -20px;
+    font-size: 15px;
+    cursor: pointer;
+}

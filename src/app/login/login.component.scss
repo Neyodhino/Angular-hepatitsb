@@ -1,0 +1,92 @@
+.login-container{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: linear-gradient(to right bottom, rgba(#363636, 0.8), rgba(#00688B, 0.8)),
+             url(../../assets/images/login_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.login{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+    text-align: center;
+    &-logo{
+        width: 10%;
+        height: 10%;
+        margin: 0 auto;
+    }
+    &-title{
+        text-align: center;
+        font-size: 25px;
+        font-family: 'source serif pro', serif;
+        font-weight: bold;
+        color: white; 
+    }
+}
+#username, #password
+{
+    border: 1px solid #aaa;
+    height: 45px;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    width: 63%;
+    margin-top: 20px;
+    padding-left: 20px;
+    transition: 0.3s ease-in-out;
+}
+#username:focus, #password:focus{
+    border: 1px solid #fff
+}
+::placeholder{
+    color: #fff;
+    font-style: italic;
+    font-size: 13px;
+}
+#submit{
+    outline: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 67%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3299CC ;
+    color: #fff;
+    font-size: 15px;
+}
+#submit:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 30px #363636;
+    transition: .5s all ease-out; 
+}
+a{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'source serif pro', serif;
+    line-height: 20px;
+    color: #fff;
+}
+.login-footer{
+    margin-top: 15%;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--title{
+        font-family: 'Eras Demi ITC';
+        text-transform: uppercase;
+        color: white;
+    }
+}
+.dev{
+    color: #750000;
+}

@@ -1,0 +1,108 @@
+.nav-content{
+    //position: fixed;
+    width: 20vw;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: 0px 9px 7px #ddd;
+    //padding-top: 30px;
+}
+.nav-title{
+    padding-top: 35px;
+    margin-left: 55px;
+}
+.nav-title a{
+    padding: 12px;
+    text-decoration: none;
+    border: 1px solid #00E5EE;
+    border-radius: 50px;
+    color: #a1a1a1;
+    font-size: 20px;
+}
+.admin-image{
+    margin-top: 30px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 30px #ddd;
+    background-color: #ddd;
+    object-fit:cover;
+}
+/**.admin-image img{    
+    width: 80px;
+    height: 80%;
+    object-fit: fill;
+    border-radius: 40%;
+}
+**/
+.admin-title{
+    margin-left: 30px;
+    margin-top: 10px;
+
+    &--name{
+        font-size: 25px;
+        font-weight: 100;
+        font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    }
+    &--title{
+        font-size: 12px;
+        font-weight: bold;
+        color: #546e7a;
+        margin-left: 47px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    }
+}
+hr{
+    width: 85%;
+    margin: 0 auto;
+    border: .3px solid #DDD;
+}
+.text-main{
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 25px; 
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: #546e7a;
+}
+.side_nav{
+    font-size: 14px;
+    margin-top: 70px;
+    margin-left: 15px;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+}
+li{
+    margin-top: 35px;
+    margin-left: 30px;
+    list-style: none;
+}
+li a:link,
+li a:visited{
+    text-decoration: none;
+    color: #546e7a;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    transition: .3s ease-in-out;
+}
+li a:hover{
+    color: #00E5EE;
+}
+.dashboard-link{
+    color: #00E5EE;
+}
+.dashboard-icon{
+    color: #00E5EE;
+}
+i {
+    margin-right: 20px;
+}
+.example-margin {
+    margin: 0 auto;
+  }

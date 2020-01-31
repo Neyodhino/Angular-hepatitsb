@@ -1,0 +1,35 @@
+<app-navbar> </app-navbar>
+
+<div class="patient_card">
+  <h2 class="patient_header">
+    Patient List
+  </h2>
+
+  <div *ngIf="!loaded else details">
+    <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+    </mat-progress-spinner>
+  </div>
+
+  <ng-template #details>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{patient.id}}</td>
+          <td>{{patient.surname}} {{patient.name}}</td>
+          <td>Obafemi Awolowo University</td>
+          <td><span class="high__risk">Positive</span></td>
+          <td><a [routerLink]="['/predict/'+patient.id]" mat-raised-button color="primary">Predict</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

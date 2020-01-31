@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="side-bar">
+    <app-sidebar> </app-sidebar>
+  </div>
+  <div class="content">
+    <app-header></app-header>
+
+    <div class="block__header">
+      <div class="blockh__header--title">
+        <h2> Dashboard</h2>
+        <small class="welcome__message">Welcome to Hepatitis Model System</small>
+      </div>
+      <div class="block__header--path">
+        <!--<i class="zmdi zmdi-home"> -->
+        <a href="#" routerLink="/dashbaord"> Home</a> / <span style="color: #636c72;">Dashboard</span>
+      </div>
+    </div>
+    <div class="card__container">
+      <div class="card">
+        <h3 class="count">
+          2500
+          <!--<i class="zmdi zmdi-home"> -->
+        </h3>
+        <p class="text__muted">Doctors</p>
+        <div class="progress">
+          <div class="progress__bar">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="count">
+          1618
+          <!--<i class="zmdi zmdi-home"> -->
+        </h3>
+        <p class="text__muted">Patients</p>
+        <div class="progress">
+          <div class="progress__bar-2">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="count">
+          284
+          <!--<i class="zmdi zmdi-home"> -->
+        </h3>
+        <p class="text__muted">Hospitals</p>
+        <div class="progress">
+          <div class="progress__bar-3">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--list of new patient goes here... -->
+
+    <div class="patient_card">
+      <h2 class="patient_header">
+        <strong style="color: rgb(117, 249, 253)"> New </strong> Patient List
+      </h2>
+      <table *ngIf="patients?.length > 0;else noPatients">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let patient of patients">
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.surname }} {{ patient.name }} </td>
+            <td>Obafemi Awolowo University</td>
+            <td><span class="high__risk">High Risk</span></td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPatients> 
+  
+    <mat-progress-spinner
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </mat-progress-spinner>
+</ng-template>

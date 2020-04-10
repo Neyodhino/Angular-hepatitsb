@@ -20,28 +20,27 @@
         <strong style="color: rgb(117, 249, 253);">Basic</strong> Information
       </h2>
       <div class="form-body">
-        <form class="form" (ngSubmit)="onSubmit()"> 
+        <form class="form" (ngSubmit)="onSubmit()">
           <div>
-          <input 
-            type="text" 
-            name="firstName" 
+          <input
+            type="text"
+            name="firstName"
             placeholder="First Name"
-            [(ngModel)] = "firstName"> 
+            [(ngModel)] = "firstName">
           </div>
 
           <div>
-          <input 
-            type="text" 
-            name="lastName" 
+          <input
+            type="text"
+            name="lastName"
             placeholder="Last Name"
             [(ngModel)] ="lastName">
         </div>
           <div>
-          <input 
-            type="text" 
-            name="speciality" 
-            placeholder="Speciality"
-            [(ngModel)] = "speciality">
+          <input
+            type="text"
+            name="speciality"
+            placeholder="Speciality">
         </div>
           <input type="submit" value="submit" id="submit">
         </form>
@@ -49,3 +48,4 @@
     </div>
   </div>
 </div>
+

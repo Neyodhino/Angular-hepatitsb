@@ -3,34 +3,34 @@
 <div class=container>
   <main class="predict">
     <form class="form" #f = "ngForm" (ngSubmit) = "onSubmit(f)">
-        <input type="number" value= {{id}} hidden [(ngModel)]="predict.id" name="id">
+        <input type="number" hidden [(ngModel)]="predict.id" name="id">
       <div class="form_group">
-        <input type="number" class="form_control" placeholder="Control" required [(ngModel)]="predict.control" name="control">
+        <input type="number" class="form_control" placeholder="Control" required  name="control">
         <label class="form_label">Control</label>
       </div>
 
       <div class="form_group">
-        <input type="number" class="form_control" placeholder="AST" required [(ngModel)]="predict.ast" name="ast">
+        <input type="number" class="form_control" placeholder="AST" required  name="ast">
         <label class="form_label">AST</label>
       </div>
 
       <div class="form_group">
-        <input type="number" class="form_control" placeholder="WBC" required [(ngModel)]="predict.wbc" name="wbc">
+        <input type="number" class="form_control" placeholder="WBC" required name="wbc">
         <label class="form_label">WBC</label>
       </div>
 
       <div class="form_group">
-        <input type="text" class="form_control" placeholder="HBeAg" required [(ngModel)]="predict.hbeag" name="hbeag">
+        <input type="text" class="form_control" placeholder="HBeAg" required name="hbeag">
         <label class="form_label">HBeAg</label>
       </div>
 
       <div class="form_group">
-        <input type="text" class="form_control" placeholder="Gender" required [(ngModel)]="predict.gender" name="gender">
+        <input type="text" class="form_control" placeholder="Gender" required name="gender">
         <label class="form_label">Gender</label>
       </div>
 
       <div class="form_group">
-        <input type="number" class="form_control" placeholder="HBVDNA" required [(ngModel)]="predict.hbvdna" name="hbvdna">
+        <input type="number" class="form_control" placeholder="HBVDNA" required name="hbvdna">
         <label class="form_label">HBVDNA</label>
       </div>
 

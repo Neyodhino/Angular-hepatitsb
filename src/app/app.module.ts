@@ -42,6 +42,7 @@ const appRoutes: Routes = [
 
 ];
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,6 @@ const appRoutes: Routes = [
     AngularFontAwesomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
     // InterceptorModule,
     FormsModule,
     MaterialModule,

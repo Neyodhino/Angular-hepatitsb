@@ -3,7 +3,6 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { AuthService } from "../_services/auth.service";
 import { first } from 'rxjs/operators';
 import { NgForm } from '@angular/forms';
-import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-login",
@@ -12,12 +11,13 @@ import { ToastrService } from "ngx-toastr";
 })
 export class LoginComponent implements OnInit {
 
+  username: string;
+  password: string;
 
   constructor(
     private auth: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private notification: ToastrService
     ) {}
 
   ngOnInit() { }
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       const username = form.value.username;
       const password = form.value.password;
       if (username !== 'admin' || password !== 'admin') {
-        return this.notification.error("Please type in correct username and password", "Notification");
+        return false;
       }
        return this.router.navigate(['/dashboard']);
 

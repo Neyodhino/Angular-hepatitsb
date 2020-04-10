@@ -12,21 +12,20 @@ export class SidebarComponent implements OnInit {
   mode = 'indeterminate';
   value = 100;
   doctor:any;
-  loaded: boolean = false;
+  loaded: boolean = true;
 
-  constructor( 
+  constructor(
     private userData: UserService
   ) { }
 
   ngOnInit() {
 
-    const id =this.userData.retrieveToken();
+    const id = this.userData.retrieveToken();
 
     this.userData.getUser(id).pipe(first())
       .subscribe(
         data => {
           this.doctor = data;
-          this.loaded = true;
         },
         error => {
           console.log(error);

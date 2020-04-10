@@ -9,6 +9,7 @@ import { UserService } from './_services/user.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./material/material.module";
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -31,13 +32,13 @@ const appRoutes: Routes = [
   { path : '', component: LoginComponent },
   { path : 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'add-doctor', component:AddDoctorComponent },
-  { path: 'all-doctor', component:AllDoctorComponent },
+  { path: 'add-doctor', component: AddDoctorComponent },
+  { path: 'all-doctor', component: AllDoctorComponent },
   { path: 'add-patient', component: AddPatientComponent },
   { path: 'all-patient', component: AllPatientComponent},
-  { path: 'doctor_dashboard', component:DoctorDashboardComponent },
-  { path: 'predict/:id', component:PredictComponent },
-  { path: 'patients', component:PatientsComponent }
+  { path: 'doctor_dashboard', component: DoctorDashboardComponent },
+  { path: 'predict/:id', component: PredictComponent },
+  { path: 'patients', component: PatientsComponent }
 
 ];
 
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     AngularFontAwesomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    //InterceptorModule,
+    ToastrModule.forRoot(),
+    // InterceptorModule,
     FormsModule,
     MaterialModule,
     RouterModule.forRoot(appRoutes)

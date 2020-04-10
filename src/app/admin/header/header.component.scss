@@ -1,5 +1,5 @@
 .header{
-    width: 75.3vw;
+    width: 76.6vw;
     height: 60px;
     background-color: #00E5EE;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
@@ -22,7 +22,7 @@
 .search-input{
     border: 1px solid #fff;
     height: 40px;
-    width: 200px;
+    width: 300px;
     border-radius: 80px;
     padding-left: 17px;
     background-color: transparent;
@@ -31,7 +31,7 @@
     &:focus{
         outline: none;
         background-color: #fff;
-        width: 230px;
+        width: 330px;
     }
 }
 ::placeholder{

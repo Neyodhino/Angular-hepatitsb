@@ -3,20 +3,15 @@
     <a href="#">Dashboard</a>
   </div>
 
-  <div class="admin-title" *ngIf="!loaded else details_t">
-    <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
-    </mat-progress-spinner>
-  </div>
-
-  <ng-template #details_t>
+  <div class="admin-title">
     <img src="../../../assets/images/doctor_girl.jpg" alt="image" class="admin-image">
     <div class="admin-title">
-      <p class="admin-title--name">{{doctor["doctor_surname"]}} {{doctor["doctor_name"]}}</p>
-      <p class="admin-title--title">{{doctor["specialization"]}}</p>
+      <p class="admin-title--name">Adesanmi Adesanya</p>
+      <p class="admin-title--title">Hepatologist</p>
     </div>
-  </ng-template>
+  </div>
   <hr>
-  
+
   <div class="text-main">
     <p>-- main</p>
   </div>
@@ -24,13 +19,13 @@
   <nav class="sidebar">
     <ul class="side-nav">
       <li>
-        <a href="#" routerLink="/dashboard">
+        <a href="#" routerLink="/dashboard" routerLinkActive>
           <i class="zmdi zmdi-home dashboard-icon"></i>
           <span class="dashboard-link">Dashboard</span>
         </a>
       </li>
       <li>
-        <a href="#" routerLink="/add-doctor">
+        <a href="#" routerLink="/add-doctor" routerLinkActive>
           <i class="zmdi zmdi-calendar-check"></i>
           <span>Add Doctors</span>
         </a>

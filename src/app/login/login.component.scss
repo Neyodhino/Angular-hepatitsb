@@ -9,7 +9,8 @@
     background-position: center;
 }
 .login{
-    width: 40%;
+    width: 32%;
+    height: 75vh;
     margin-left: auto;
     margin-right: auto;
     padding-top: 150px;
@@ -24,7 +25,7 @@
         font-size: 25px;
         font-family: 'source serif pro', serif;
         font-weight: bold;
-        color: white; 
+        color: white;
     }
 }
 #username, #password
@@ -47,7 +48,7 @@
 ::placeholder{
     color: #fff;
     font-style: italic;
-    font-size: 13px;
+    font-size: 15px;
 }
 #submit{
     outline: none;
@@ -64,7 +65,7 @@
 #submit:hover{
     cursor: pointer;
     box-shadow: 0 10px 30px #363636;
-    transition: .5s all ease-out; 
+    transition: .5s all ease-out;
 }
 a{
     text-decoration: none;
@@ -74,7 +75,7 @@ a{
     color: #fff;
 }
 .login-footer{
-    margin-top: 15%;
+    // margin-top: 22%;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -85,6 +86,9 @@ a{
         font-family: 'Eras Demi ITC';
         text-transform: uppercase;
         color: white;
+    }
+    p{
+      color: white;
     }
 }
 .dev{

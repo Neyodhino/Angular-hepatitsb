@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { AuthService } from "../_services/auth.service";
 import { first } from 'rxjs/operators';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-login",
@@ -13,9 +14,10 @@ export class LoginComponent implements OnInit {
 
 
   constructor(
-    private auth: AuthService, 
+    private auth: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private notification: ToastrService
     ) {}
 
   ngOnInit() { }
@@ -23,16 +25,19 @@ export class LoginComponent implements OnInit {
     onSubmit(form: NgForm){
       const username = form.value.username;
       const password = form.value.password;
+      if (username !== 'admin' || password !== 'admin') {
+        return this.notification.error("Please type in correct username and password", "Notification");
+      }
+       return this.router.navigate(['/dashboard']);
 
-     this.auth.login(username, password).pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate(['/dashboard'])
-        },
-        error => {
-          console.log(error);
-        }
-      )
+    //  this.auth.login(username, password).pipe(first())
+    //   .subscribe(
+    //     data => {
+    //       this.router.navigate(['/dashboard'])
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     }
+    //   )
     }
-    
 }
